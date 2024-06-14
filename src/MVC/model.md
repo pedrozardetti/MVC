@@ -1,5 +1,7 @@
 # MODEL: O modelo de negócios
 
+----
+
 O Model é a camada de manipulação de dados, responsável pela comunicação com o banco de dados e retorno dos dados para o Controller.
 
 - É o conjunto de objetos que implementam as regras de negócio.

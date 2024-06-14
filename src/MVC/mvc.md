@@ -1,5 +1,7 @@
 # MVC: Padrão de Projeto de Software
 
+----
+
 O MVC é um padrão de projeto de software no qual as classes são organizadas delegando responsabilidades específicas para cada uma.
 
 ## Benefícios do MVC:
