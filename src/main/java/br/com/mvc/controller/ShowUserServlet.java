@@ -1,5 +1,7 @@
 package br.com.mvc.controller;
 
+import br.com.mvc.model.Usuario;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,6 +27,11 @@ public class ShowUserServlet extends HttpServlet {
         String pagina = "/erro.jsp";
 
             if (pUser.equals("isidro") && pSenha.equals("1234")) {
+                Usuario u = new Usuario();
+                u.setId(1010);
+                u.setEmail("Professor Isidro");
+                u.setEmail("isidro@professorisidro.com.br");
+                req.setAttribute("Usuário: ", u);
                 pagina = "/ok.jsp";
             }
 
