@@ -1,6 +1,7 @@
 package br.com.mvc.controller;
 
 import br.com.mvc.model.Usuario;
+import com.google.gson.Gson;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -32,11 +33,16 @@ public class ShowUserServlet extends HttpServlet {
             u.setUsername("isidro");
             u.setFullName("Professor Isidro");
             u.setEmail("isidro@professorisidro.com.br");
-            req.setAttribute("Usuario", u);
-            if (pModo.equals("html"))
+            if (pModo.equals("html")) {
+                req.setAttribute("Usuario", u);
                 pagina = "/ok.jsp";
-            else
+            } else {
+                Gson gson = new Gson();
+                String resultado = gson.toJson(u);
+                req.setAttribute("UsuarioJSON", resultado);
                 pagina = "/result.jsp";
+            }
+
         }
 
         RequestDispatcher dispatcher;
