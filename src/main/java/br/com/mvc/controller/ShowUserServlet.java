@@ -33,7 +33,10 @@ public class ShowUserServlet extends HttpServlet {
             u.setFullName("Professor Isidro");
             u.setEmail("isidro@professorisidro.com.br");
             req.setAttribute("Usuario", u);
-            pagina = "/ok.jsp";
+            if (pModo.equals("html"))
+                pagina = "/ok.jsp";
+            else
+                pagina = "/result.jsp";
         }
 
         RequestDispatcher dispatcher;
