@@ -13,8 +13,23 @@ public class ShowUserServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        String pUser = req.getParameter("user");
+        String pSenha = req.getParameter("senha");
+        String pModo = req.getParameter("modo");
+
+        System.out.println("User - " + pUser);
+        System.out.println("Senha - " + pSenha);
+        System.out.println("Modo - " + pModo);
+
+        String pagina = "/erro.jsp";
+
+            if (pUser.equals("isidro") && pSenha.equals("1234")) {
+                pagina = "/ok.jsp";
+            }
+
         RequestDispatcher dispatcher;
-        dispatcher = getServletContext().getRequestDispatcher("/ok.jsp");
+        dispatcher = getServletContext().getRequestDispatcher(pagina);
         dispatcher.forward(req, resp);
 
     }
