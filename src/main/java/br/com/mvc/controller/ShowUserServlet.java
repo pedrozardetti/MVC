@@ -1,5 +1,6 @@
 package br.com.mvc.controller;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,9 +13,9 @@ public class ShowUserServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.sendRedirect("ok.jsp");
-
-
+        RequestDispatcher dispatcher;
+        dispatcher = getServletContext().getRequestDispatcher("/ok.jsp");
+        dispatcher.forward(req, resp);
 
     }
 }
