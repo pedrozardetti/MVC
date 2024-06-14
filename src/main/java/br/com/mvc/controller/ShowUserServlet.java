@@ -26,14 +26,15 @@ public class ShowUserServlet extends HttpServlet {
 
         String pagina = "/erro.jsp";
 
-            if (pUser.equals("isidro") && pSenha.equals("1234")) {
-                Usuario u = new Usuario();
-                u.setId(1010);
-                u.setEmail("Professor Isidro");
-                u.setEmail("isidro@professorisidro.com.br");
-                req.setAttribute("Usuário: ", u);
-                pagina = "/ok.jsp";
-            }
+        if (pUser.equals("isidro") && pSenha.equals("1234")) {
+            Usuario u = new Usuario();
+            u.setId(1010);
+            u.setUsername("isidro");
+            u.setFullName("Professor Isidro");
+            u.setEmail("isidro@professorisidro.com.br");
+            req.setAttribute("Usuario", u);
+            pagina = "/ok.jsp";
+        }
 
         RequestDispatcher dispatcher;
         dispatcher = getServletContext().getRequestDispatcher(pagina);
