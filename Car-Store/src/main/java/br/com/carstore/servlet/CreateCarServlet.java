@@ -1,2 +1,6 @@
-package br.com.carstore.servlet;public class CreateCarServlet {
+package br.com.carstore.servlet;
+
+import javax.servlet.http.HttpServlet;
+
+public class CreateCarServlet extends HttpServlet {
 }
