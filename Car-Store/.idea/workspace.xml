@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7001bd3-cd81-4db3-b0fc-cd8ddc221520" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/carstore/dao/CarDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/carstore/dao/CarDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/carstore/servlet/CreateCarServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/carstore/servlet/CreateCarServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/carstore/servlet/ListCarServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/carstore/servlet/ListCarServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +111,7 @@
       <workItem from="1718583071656" duration="4695000" />
       <workItem from="1718587978949" duration="389000" />
       <workItem from="1718588375626" duration="3361000" />
-      <workItem from="1718663013455" duration="9132000" />
+      <workItem from="1718663013455" duration="12677000" />
     </task>
     <servers />
   </component>
