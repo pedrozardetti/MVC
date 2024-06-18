@@ -23,7 +23,11 @@ public class CreateCarServlet extends HttpServlet {
         new CarDAO().createCar(car);
 
 
-        req.getRequestDispatcher("index.html").forward(req, resp);
+        // Redireciona o usuário para a nova página após o insert de um novo carro no nosso banco de dados
+        // A req é direcionada para ListCarServlet, que executa o doPost(), faz a consulta no BD e redireciona para dashboard.jsp.
+        resp.sendRedirect("/find-all-cars");
+
+
 
     }
 
