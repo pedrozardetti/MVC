@@ -4,6 +4,7 @@ public class Car {
 
     private String name;
 
+    //Construtor substituindo o setter, inicializando o name;
     public Car(String name) {
         this.name = name;
     }
