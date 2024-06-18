@@ -4,6 +4,7 @@ import br.com.carstore.model.Car;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 
 public class CarDAO {
 
@@ -15,8 +16,15 @@ public class CarDAO {
 
             Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
 
+            PreparedStatement preparedStatement = con.prepareStatement(SQL);
+            preparedStatement.setString(1, car.getName());
+            preparedStatement.execute();
+            System.out.println("Success in insert command");
 
-            System.out.println("Sucess in Connection");
+            con.close();
+
+
+            System.out.println("Success in Connection");
         } catch (Exception e) {
 
             System.out.println("Error in connection");
