@@ -5,6 +5,7 @@ import br.com.carstore.model.Car;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.util.List;
 
 public class CarDAO {
 
@@ -30,6 +31,13 @@ public class CarDAO {
             System.out.println("Error in connection");
 
         }
+
+    }
+
+    public List<Car> findAllCars() {
+
+        String SQL = "SELECT * FROM CAR";
+        
 
     }
 }
