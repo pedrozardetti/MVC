@@ -61,11 +61,14 @@ public class CarDAO {
 
             // Iteração sobre os resultados da consulta
             while (resultSet.next()) {
+
+                String carId = resultSet.getString("id");
                 // Recuperação do nome do carro da coluna "name" do ResultSet
                 String carName = resultSet.getString("name");
 
+
                 // Criação de um novo objeto Car com o nome recuperado
-                Car car = new Car(carName);
+                Car car = new Car(carName, carId);
 
                 // Adição do objeto Car à lista de carros
                 cars.add(car);
