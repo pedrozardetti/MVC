@@ -89,4 +89,25 @@ public class CarDAO {
         }
     }
 
+    public void deleteCarById(String carId) {
+
+        String SQL = "DELETE CAR WHERE ID = ?";
+
+        try {
+            Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+
+            PreparedStatement preparedStatement = con.prepareStatement(SQL);
+            preparedStatement.setString(1, carId);
+            preparedStatement.execute();
+
+            System.out.println("Success on delete car with ID: " + carId);
+
+            con.close();
+        } catch (Exception e) {
+
+            System.out.println("Fail in database connection");
+        }
+
+    }
+
 }
