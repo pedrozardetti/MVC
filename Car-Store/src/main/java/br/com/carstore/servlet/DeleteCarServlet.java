@@ -20,4 +20,5 @@ public class DeleteCarServlet extends HttpServlet {
 
         resp.sendRedirect("/find-all-cars");
     }
+
 }
