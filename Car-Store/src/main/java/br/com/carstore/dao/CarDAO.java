@@ -113,4 +113,8 @@ public class CarDAO {
 
     }
 
+    public void updateCar(Car car) {
+        String SQL = "UPDATE CAR SET NAME = ? WHERE ID = ?";
+    }
+
 }
