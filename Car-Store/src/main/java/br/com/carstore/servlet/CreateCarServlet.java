@@ -20,15 +20,23 @@ public class CreateCarServlet extends HttpServlet {
         String carId = req.getParameter("id");
         String carName = req.getParameter("car-name");
 
+
         Car car = new Car(carName);
 
-        new CarDAO().createCar(car);
+        CarDAO carDao = new CarDAO();
+
+        if (carId.isBlank()) {
+
+            carDao.createCar(car);
+        } else {
+
+            carDao.updateCar(car);
+        }
 
 
         // Redireciona o usuário para a nova página após o insert de um novo carro no nosso banco de dados
         // A req é direcionada para ListCarServlet, que executa o doPost(), faz a consulta no BD e redireciona para dashboard.jsp.
         resp.sendRedirect("/find-all-cars");
-
 
 
     }
