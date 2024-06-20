@@ -126,6 +126,7 @@ public class CarDAO {
 
             preparedStatement.setString(1, car.getName());
             preparedStatement.setString(2, car.getId());
+            preparedStatement.execute();
 
             System.out.println("Success in car update!");
 
@@ -139,4 +140,4 @@ public class CarDAO {
     }
 }
 
-}
+
