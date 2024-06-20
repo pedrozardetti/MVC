@@ -120,16 +120,20 @@ public class CarDAO {
         try {
             Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
 
-            PreparedStatement preparedStatement = con.prepareStatement(SQL);
-            preparedStatement.setString(1, carId);
-            preparedStatement.execute();
+            System.out.println("Success in database connection");
 
-            System.out.println("Success on delete car with ID: " + carId);
+            PreparedStatement preparedStatement = con.prepareStatement(SQL);
+
+            preparedStatement.setString(1, car.getName());
+            preparedStatement.setString(2, car.getId());
+
+            System.out.println("Success in car update!");
 
             con.close();
         } catch (Exception e) {
 
             System.out.println("Fail in database connection");
+            System.out.println("Error: " + e.getMessage());
         }
 
     }
