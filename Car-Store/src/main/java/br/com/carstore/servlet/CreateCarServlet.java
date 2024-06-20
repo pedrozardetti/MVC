@@ -16,6 +16,8 @@ public class CreateCarServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+
+        String carId = req.getParameter("id");
         String carName = req.getParameter("car-name");
 
         Car car = new Car(carName);
