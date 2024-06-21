@@ -20,7 +20,7 @@ public class CarDAO {
 
         try {
 
-            Connection connection = ConnectionPoolConfig.getConnection();
+            Connection con = ConnectionPoolConfig.getConnection();
 
             PreparedStatement preparedStatement = con.prepareStatement(SQL);
             preparedStatement.setString(1, car.getName());
@@ -46,7 +46,7 @@ public class CarDAO {
 
         try {
 
-            Connection connection = ConnectionPoolConfig.getConnection();
+            Connection con = ConnectionPoolConfig.getConnection();
 
             // Criação de um PreparedStatement para preparar e executar a consulta SQL
             PreparedStatement preparedStatement = con.prepareStatement(SQL);
@@ -95,7 +95,7 @@ public class CarDAO {
         String SQL = "DELETE CAR WHERE ID = ?";
 
         try {
-            Connection connection = ConnectionPoolConfig.getConnection();
+            Connection con = ConnectionPoolConfig.getConnection();
 
             PreparedStatement preparedStatement = con.prepareStatement(SQL);
             preparedStatement.setString(1, carId);
@@ -117,7 +117,7 @@ public class CarDAO {
 
         try {
 
-            Connection connection = ConnectionPoolConfig.getConnection();
+            Connection con = ConnectionPoolConfig.getConnection();
 
             PreparedStatement preparedStatement = con.prepareStatement(SQL);
 
