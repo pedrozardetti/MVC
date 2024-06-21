@@ -6,7 +6,6 @@ import br.com.carstore.model.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 public class UserDao {
 
@@ -23,16 +22,23 @@ public class UserDao {
             preparedStatement.setString(1, user.getUsername());
             ResultSet resultSet = preparedStatement.executeQuery();
 
+            System.out.println("Success in select username");
+
             while (resultSet.next()) {
 
                 String password = resultSet.getString("password");
+
+                if (password.equals(user.getPassword())) {
+
+                    return true;
+                }
             }
 
-            System.out.println("Success in select username");
 
             con.close();
 
-            return true;
+            return false;
+
         } catch (Exception e) {
 
             System.out.println("Error: " + e.getMessage());
