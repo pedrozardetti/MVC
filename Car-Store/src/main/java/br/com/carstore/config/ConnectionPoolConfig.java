@@ -33,6 +33,7 @@ public class ConnectionPoolConfig {
     }
 
     public static Connection getConnection() throws SQLException {
+
         return getDataSource().getConnection();
     }
 }
