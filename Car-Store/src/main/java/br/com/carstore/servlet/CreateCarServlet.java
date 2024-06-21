@@ -21,7 +21,7 @@ public class CreateCarServlet extends HttpServlet {
         String carName = req.getParameter("car-name");
 
 
-        Car car = new Car(carName);
+        Car car = new Car(carName, carId);
 
         CarDAO carDao = new CarDAO();
 
