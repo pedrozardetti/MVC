@@ -1,5 +1,6 @@
 package br.com.carstore.servlet;
 
+import br.com.carstore.dao.UserDao;
 import br.com.carstore.model.User;
 
 import javax.servlet.ServletException;
@@ -26,5 +27,16 @@ public class LoginServlet extends HttpServlet {
         String password = req.getParameter("password");
 
         User user = new User(username, password);
+
+        boolean isValidUser = new UserDao().verifyCredentials(user);
+
+        if (isValidUser) {
+            // Obtém a sessão atual da requisição. Se não existir, cria uma nova.
+            // A sessão é um objeto que permite armazenar dados entre diferentes requisições HTTP do mesmo user.
+            req.getSession().setAttribute("loggedUser", username);
+
+            // Redireciona o cliente para a nova URL
+            resp.sendRedirect("/find-all-cars");
+        }
     }
 }
