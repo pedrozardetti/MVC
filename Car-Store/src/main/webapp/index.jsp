@@ -8,7 +8,7 @@
     <input type="text" name="car-name" id="car-name" value="${param.name}">
     <input type="hidden" name="id" id="id" value="${param.id}">
 
-    <button type="submit">Enviar</button>
+    <button type="submit">Save</button>
 
 
 
