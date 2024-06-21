@@ -6,7 +6,11 @@ public class ConnectionPoolConfig {
 
     private static BasicDataSource dataSource;
 
-    public static BasicDataSource getDataSource() {
+    private ConnectionPoolConfig() {
+        getDataSource();
+    }
+
+    private static BasicDataSource getDataSource() {
 
         if (dataSource == null) {
             dataSource = new BasicDataSource();
@@ -17,7 +21,7 @@ public class ConnectionPoolConfig {
             dataSource.setMaxIdle(10);
             dataSource.setMaxTotal(50);
 
-            System.out.println("New connection pool created with sucessful");
+            System.out.println("New connection pool created succesfully!");
 
 
         }
