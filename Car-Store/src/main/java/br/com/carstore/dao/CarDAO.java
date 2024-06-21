@@ -1,5 +1,6 @@
 package br.com.carstore.dao;
 
+import br.com.carstore.config.ConnectionPoolConfig;
 import br.com.carstore.model.Car;
 
 import java.sql.Connection;
@@ -19,7 +20,7 @@ public class CarDAO {
 
         try {
 
-            Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            Connection connection = ConnectionPoolConfig.getConnection();
 
             PreparedStatement preparedStatement = con.prepareStatement(SQL);
             preparedStatement.setString(1, car.getName());
@@ -44,11 +45,8 @@ public class CarDAO {
         String SQL = "SELECT * FROM CAR";
 
         try {
-            // Abertura da conexão com o banco de dados H2 usando JDBC
-            Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
 
-            // Log que a conexão foi bem-sucedida
-            System.out.println("Success in database connection");
+            Connection connection = ConnectionPoolConfig.getConnection();
 
             // Criação de um PreparedStatement para preparar e executar a consulta SQL
             PreparedStatement preparedStatement = con.prepareStatement(SQL);
@@ -97,7 +95,7 @@ public class CarDAO {
         String SQL = "DELETE CAR WHERE ID = ?";
 
         try {
-            Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            Connection connection = ConnectionPoolConfig.getConnection();
 
             PreparedStatement preparedStatement = con.prepareStatement(SQL);
             preparedStatement.setString(1, carId);
@@ -118,9 +116,8 @@ public class CarDAO {
         String SQL = "UPDATE CAR SET NAME = ? WHERE ID = ?";
 
         try {
-            Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
 
-            System.out.println("Success in database connection");
+            Connection connection = ConnectionPoolConfig.getConnection();
 
             PreparedStatement preparedStatement = con.prepareStatement(SQL);
 
