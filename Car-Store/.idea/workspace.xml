@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7001bd3-cd81-4db3-b0fc-cd8ddc221520" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/carstore/filter/AuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/carstore/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/carstore/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/carstore/servlet/ListCarServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/carstore/servlet/ListCarServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/carstore/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/carstore/servlet/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +41,9 @@
   "keyToString": {
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Maven.Car-Store [org.apache.tomcat.maven:tomcat7-maven-plugin:2.1:run].executor": "Run",
-    "Maven.Car-Store [tomcat7:run].executor": "Run",
+    "Maven.Car-Store [tomcat7:run].executor": "Debug",
+    "Maven.car-store [clean].executor": "Run",
+    "Maven.car-store [package].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -112,7 +116,7 @@
       <workItem from="1718587978949" duration="389000" />
       <workItem from="1718588375626" duration="3361000" />
       <workItem from="1718663013455" duration="18877000" />
-      <workItem from="1718922392951" duration="16727000" />
+      <workItem from="1718922392951" duration="21503000" />
     </task>
     <servers />
   </component>
