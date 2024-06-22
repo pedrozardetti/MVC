@@ -13,7 +13,7 @@ import java.util.List;
 
 
 //A classe atende requisições no endpoint find-all-cars e admin/find-all-cars
-@WebServlet({"/find-all-cars", "admin/find-all-cars"})
+@WebServlet({"/find-all-cars", "/admin/find-all-cars"})
 public class ListCarServlet extends HttpServlet {
 
     @Override //Sobrescrevemos o método doGet, pois essa classe vai receber requisições do tipo Get
