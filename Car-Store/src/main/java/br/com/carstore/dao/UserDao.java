@@ -49,8 +49,5 @@ public class UserDao {
 
 
     }
-
-    public void Hello() {
-
-    }
+    
 }
