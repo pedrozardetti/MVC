@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7001bd3-cd81-4db3-b0fc-cd8ddc221520" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/carstore/filter/AuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/carstore/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/carstore/dao/UserDao.java" afterDir="false" />
     </list>
@@ -111,7 +112,7 @@
       <workItem from="1718587978949" duration="389000" />
       <workItem from="1718588375626" duration="3361000" />
       <workItem from="1718663013455" duration="18877000" />
-      <workItem from="1718922392951" duration="15069000" />
+      <workItem from="1718922392951" duration="16727000" />
     </task>
     <servers />
   </component>
