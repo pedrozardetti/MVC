@@ -31,12 +31,19 @@ public class LoginServlet extends HttpServlet {
         boolean isValidUser = new UserDao().verifyCredentials(user);
 
         if (isValidUser) {
-            // Obtém a sessão atual da requisição. Se não existir, cria uma nova.
+            // Obtém a sessão atual da requisição. Se não existir, retorna uma mensagem de credencial inválida.
             // A sessão é um objeto que permite armazenar dados entre diferentes requisições HTTP do mesmo user.
             req.getSession().setAttribute("loggedUser", username);
 
             // Redireciona o cliente para a nova URL
             resp.sendRedirect("/find-all-cars");
+        } else {
+
+            req.setAttribute("message", "Invalid credentials");
+
+
+            // Caso o usuário não esteja logado, ele é devolvido para a página de login novamente
+            req.getRequestDispatcher("login.jsp").forward(req, resp);
         }
     }
 }
