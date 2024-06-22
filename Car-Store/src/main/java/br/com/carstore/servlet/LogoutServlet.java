@@ -15,5 +15,11 @@ public class LogoutServlet extends HttpServlet {
 
         //Ao fazer o doGet, invalidamos a sessão do usuário que está fazendo a requisição. Ele será deslogado
         req.getSession().invalidate();
+
+        // É usado para armazenar temporariamente uma mensagem de sucesso na requisição HTTP atual
+        req.setAttribute("message", "Success on logout");
+
+        
+        req.getRequestDispatcher("login.jsp").forward(req, resp);
     }
 }
