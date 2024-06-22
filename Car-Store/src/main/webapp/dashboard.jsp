@@ -26,7 +26,7 @@
                 <td>${car.id}</td>
                 <td>${car.name}</td>
                 <td>
-                    <c:if test="${sessionScope, loggedUser != null}">
+                    <c:if test="${sessionScope.loggedUser != null}">
                     <form action="/delete-car" method="post">
                         <input type="hidden" id="id" name="id" value="${car.id}">
                         <button type="submit">Delete</button>
