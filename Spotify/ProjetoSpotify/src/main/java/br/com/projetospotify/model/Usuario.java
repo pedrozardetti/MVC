@@ -6,6 +6,17 @@ public class Usuario {
     private String fullname;
     private String email;
 
+    // Não faz nada, apenas para sobrecarga
+    public Usuario() {
+    }
+
+    public Usuario(int id, String username, String fullname, String email) {
+        this.id = id;
+        this.username = username;
+        this.fullname = fullname;
+        this.email = email;
+    }
+
     public int getId() {
         return id;
     }
