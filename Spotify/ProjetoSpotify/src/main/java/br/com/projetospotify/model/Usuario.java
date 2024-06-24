@@ -1,2 +1,4 @@
-package br.com.projetospotify.model;public class Usuario {
+package br.com.projetospotify.model;
+
+public class Usuario {
 }
