@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a3567cb-5815-4ede-a562-96079279505f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/erro.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/ok.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/projetospotify/servlet/ShowUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/projetospotify/servlet/ShowUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/erro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/erro.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ok.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ok.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +107,7 @@
       <updated>1719256719718</updated>
       <workItem from="1719256720717" duration="1643000" />
       <workItem from="1719258923301" duration="742000" />
-      <workItem from="1719259676101" duration="1606000" />
+      <workItem from="1719259676101" duration="5040000" />
     </task>
     <servers />
   </component>
