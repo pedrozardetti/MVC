@@ -13,12 +13,15 @@ public class ShowUserServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
+        // Obtém o RequestDispatcher para a página JSP "ok.jsp"
         RequestDispatcher dispatcher;
         dispatcher = getServletContext().getRequestDispatcher("/ok.jsp");
 
+        // Log para depuração, indica que a requisição chegou aqui
         System.out.println("Chegou aqui");
 
+        // Encaminha a requisição e a resposta para "ok.jsp"
         dispatcher.forward(req, resp);
-
     }
 }
